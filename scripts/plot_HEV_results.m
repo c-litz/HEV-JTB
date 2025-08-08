@@ -3,7 +3,6 @@ clear; clc;
 % set path, load data, organize data:
 this_file_path = mfilename('fullpath');
 this_folder = fileparts(this_file_path);
-addpath(fullfile(this_folder, 'scripts'));
 
 data_dir = fullfile(this_folder, 'data'); 
 if ~exist(data_dir, 'dir')

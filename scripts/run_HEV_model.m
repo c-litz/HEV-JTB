@@ -5,7 +5,6 @@ function run_HEV_model()
     % get folder containing this script and add to matlab path
     this_file_path = mfilename('fullpath');
     this_folder = fileparts(this_file_path);
-    addpath(fullfile(this_folder, 'scripts'));
 
     % create 'data' folder if it doesn't exist
     data_dir = fullfile(this_folder, 'data');
