@@ -3,8 +3,9 @@ clear; clc;
 % set path, load data, organize data:
 this_file_path = mfilename('fullpath');
 this_folder = fileparts(this_file_path);
+repo_root = fullfile(this_folder, '..');
 
-data_dir = fullfile(this_folder, 'data'); 
+data_dir = fullfile(repo_root, 'data'); 
 if ~exist(data_dir, 'dir')
     mkdir(data_dir);
 end
@@ -160,7 +161,7 @@ box off;
 text(0.01, 1.11, '(B)', 'Units', 'normalized', 'FontWeight', 'bold', ...
      'FontSize', 26, 'HorizontalAlignment', 'left', 'VerticalAlignment', 'top');
 
-fig_dir = fullfile(this_folder, 'figures');  % or 'Figures' if you prefer capital F
+fig_dir = fullfile(repo_root, 'figures');  % or 'Figures' if you prefer capital F
 if ~exist(fig_dir, 'dir')
     mkdir(fig_dir);
 end
@@ -292,7 +293,7 @@ cb.Label.Rotation = 90;
 cb.Label.FontSize = 18;
 
 % export
-fig_dir = fullfile(this_folder, 'figures');  % define figures directory
+fig_dir = fullfile(repo_root, 'figures');  % define figures directory
 if ~exist(fig_dir, 'dir')
     mkdir(fig_dir);
 end
@@ -422,7 +423,7 @@ cb.Label.Rotation = 90;
 cb.Label.FontSize = 18;
 
 % export
-fig_dir = fullfile(this_folder, 'figures');  % define figures directory
+fig_dir = fullfile(repo_root, 'figures');  % define figures directory
 if ~exist(fig_dir, 'dir')
     mkdir(fig_dir);
 end

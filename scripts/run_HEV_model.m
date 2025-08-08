@@ -3,15 +3,17 @@ function run_HEV_model()
     rng(123);
 
     % get folder containing this script and add to matlab path
+    % get folder containing this script
     this_file_path = mfilename('fullpath');
     this_folder = fileparts(this_file_path);
-
-    % create 'data' folder if it doesn't exist
-    data_dir = fullfile(this_folder, 'data');
+    repo_root = fullfile(this_folder, '..'); % move up folder up to repo main
+    
+    % create 'data' folder inside repo root if it doesn't exist
+    data_dir = fullfile(repo_root, 'data');
     if ~exist(data_dir, 'dir')
         mkdir(data_dir);
     end
-    
+
     % load or generate the LHS sample for parameters
     param_file = fullfile(data_dir, 'param_samples.mat');
     num_runs = 500;
@@ -432,8 +434,9 @@ function run_HEV_model()
     % save to global .mat file (3 thresholds x 7 interventions)
     this_file_path = mfilename('fullpath');
     this_folder = fileparts(this_file_path);
+    repo_root = fullfile(this_folder, '..');
 
-    data_dir = fullfile(this_folder, 'data');
+    data_dir = fullfile(repo_root, 'data');
     if ~exist(data_dir, 'dir')
         mkdir(data_dir);
     end

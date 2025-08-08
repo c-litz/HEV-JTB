@@ -4,7 +4,7 @@ function analyze_HEV_results()
     this_folder = fileparts(this_file_path);
     repo_root = fullfile(this_folder, '..');
 
-    data_dir = fullfile(repo_root, 'data');
+    data_dir = fullfile(this_folder, 'data');
     if ~exist(data_dir, 'dir')
         mkdir(data_dir);
     end
