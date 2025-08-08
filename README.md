@@ -38,7 +38,7 @@ This repository contains MATLAB and R scripts for modeling Hepatitis E Virus (HE
 
 - The repository **does not include** the `data` or `figures` folders.  
 - These folders are **created locally** when you run the MATLAB scripts.
-- The `data` folder stores generated `sensitivity_HEV_data.csv` and the three `.mat` files needed by the R scripts.
+- The `data` folder stores generated `sensitivity_HEV_data.csv` and the three `.mat` files.
 - The `figures` folder stores all PDF figure outputs from both MATLAB and R scripts.
 
 ### Important
