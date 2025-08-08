@@ -42,17 +42,24 @@ This repository contains MATLAB and R scripts for modeling Hepatitis E Virus (HE
 - The `figures` folder stores all PDF figure outputs from both MATLAB and R scripts.
 
 ### Important
+## Getting Started
 
-1. **Run MATLAB scripts first:**  
+1. **Clone this repository:**
+
+```bash
+git clone https://github.com/c-litz/hev-jtb.git
+cd hev-jtb/scripts
+
+2. **Run MATLAB scripts first:**  
    Before running the R script, ensure you have run `run_HEV_model.m` and `analyze_HEV_results.m` in MATLAB. This will generate the necessary `data` folder and `.csv` files required by the R scripts.
 
-2. **R scripts expect the `data` folder and files to exist:**  
+3. **R scripts expect the `data` folder and files to exist:**  
    The R scripts locate the `data` folder and files relative to their own location in the `scripts` folder. If the data files are missing, the R scripts will stop with an error message instructing you to run the MATLAB scripts first.
 
-3. **Figure outputs:**  
+4. **Figure outputs:**  
    Both MATLAB and R save figures in a `figures` folder located at the repo root (alongside `scripts` and `data`). This folder is also created automatically if it doesn’t exist.
 
-4. **Running scripts:**  
+5. **Running scripts:**  
    - All scripts (MATLAB and R) are location within the `scripts` folder 
    - All scripts automatically detect their own location and build paths to the generated data and figures folders relative to that location.
 
